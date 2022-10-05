@@ -4,8 +4,8 @@ body {
 
 .celdas {
     display: grid;
-    grid-template-columns: 7em 7em 7em;
-    grid-template-rows: 7em 7em 7em;
+    grid-template-rows: 10vw 10vw 10vw;
+    grid-template-columns: 20vh 20vh 20vh;
 }
 
 .celda1 {
