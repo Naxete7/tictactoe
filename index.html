@@ -5,11 +5,43 @@
     <title>Tic Tac Toe</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-
+    <div id="header">
+        <h1>TIC TAC TOE</h1>
+    </div>
+    <div id="main">
+        <div class="container-fluid">
+            <div class="row d-flex">
+                <div class="col celdas">
+                    <div class="celda1">1</div>
+                    <div class="celda2">2</div>
+                    <div class="celda3">3</div>
+                    <div class="celda4">4</div>
+                    <div class="celda5">5</div>
+                    <div class="celda6">6</div>
+                    <div class="celda7">7</div>
+                    <div class="celda8">8</div>
+                    <div class="celda9">9</div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h3>Instrucciones</h3>
+                        <p>Cada jugador marcara una casilla de forma alterna. El primero que consiga hacer 3 en raya ganará.</p>
+                    </div>
+                    <div><button href="./html/seleccionjugador.html" type="button" class="btn btn-outline-warning">Empezar partida</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
 </body>
 
 </html>
