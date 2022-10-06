@@ -1,5 +1,6 @@
 body {
     background-color: rgb(36, 233, 92);
+    background-image: url(../img/Best-Metal-Images.jpg);
 }
 
 .celdas {
@@ -9,57 +10,57 @@ body {
 }
 
 .celda1 {
-    border: solid 0.1em black;
+    border: solid 0.3em orange;
     text-align: center;
     border-top: none;
     border-left: none;
 }
 
 .celda2 {
-    border: solid 0.1em black;
+    border: solid 0.3em orange;
     text-align: center;
     border-top: none;
 }
 
 .celda3 {
-    border: solid 0.1em black;
+    border: solid 0.3em orange;
     text-align: center;
     border-top: none;
     border-right: none;
 }
 
 .celda4 {
-    border: solid 0.1em black;
+    border: solid 0.3em orange;
     text-align: center;
     border-left: none;
 }
 
 .celda5 {
-    border: solid 0.1em black;
+    border: solid 0.3em orange;
     text-align: center;
 }
 
 .celda6 {
-    border: solid 0.1em black;
+    border: solid 0.3em orange;
     text-align: center;
     border-right: none;
 }
 
 .celda7 {
-    border: solid 0.1em black;
+    border: solid 0.3em orange;
     text-align: center;
     border-left: none;
     border-bottom: none;
 }
 
 .celda8 {
-    border: solid 0.1em black;
+    border: solid 0.3em orange;
     text-align: center;
     border-bottom: none;
 }
 
 .celda9 {
-    border: solid 0.1em black;
+    border: solid 0.1em orange;
     text-align: center;
     border-bottom: none;
     border-right: none;
@@ -67,4 +68,8 @@ body {
 
 #header {
     text-align: center;
+}
+
+.nombres {
+    color: orange;
 }

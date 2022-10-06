@@ -1,11 +1,12 @@
 body {
     background-color: rgb(36, 233, 92);
+    background-image: url(../img/fondo\ negro.jpg);
 }
 
 .celdas {
     display: grid;
-    grid-template-rows: 10vw 10vw 10vw;
-    grid-template-columns: 20vh 20vh 20vh;
+    grid-template-rows: 7em 7em 7em;
+    grid-template-columns: 7em 7em 7em;
 }
 
 .celda1 {
@@ -67,4 +68,17 @@ body {
 
 #header {
     text-align: center;
+}
+
+.instrucciones {
+    color: orange;
+}
+
+.bienvenida {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 8em;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
