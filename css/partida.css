@@ -1,6 +1,6 @@
 body {
     background-color: rgb(36, 233, 92);
-    background-image: url(../img/fondo\ negro.jpg);
+    background-image: url(../img/metal-lines-stripes-light-shiny-silver.jpg);
 }
 
 .celdas {
@@ -8,6 +8,7 @@ body {
     grid-template-rows: 7em 7em 7em;
     grid-template-columns: 7em 7em 7em;
     margin-top: 3em;
+    justify-content: center;
 }
 
 .celda1 {
@@ -60,5 +61,5 @@ body {
 
 .futbol {
     width: 5em;
-    height: 5em;
+    height: 6em;
 }
