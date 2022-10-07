@@ -1,6 +1,8 @@
 body {
     background-color: rgb(36, 233, 92);
     background-image: url(../img/metal-lines-stripes-light-shiny-silver.jpg);
+    /* background-image: url(../img/royal-blue-vegeta-446415.png);
+    background-image: url(../img/dragon-ball-goku-png-photos-818491.png) */
 }
 
 .celdas {
@@ -82,8 +84,8 @@ body {
 }
 
 .boton {
-    width: 6em;
-    height: 6em;
+    width: 7.2em;
+    height: 7.2em;
     color: rgba(36, 45, 53, 0);
     background-color: rgba(250, 235, 215, 0);
     border: none;

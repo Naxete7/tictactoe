@@ -4,7 +4,7 @@ const tablero = [];
 const btnPulsado = (e, pos) => {
     turno++;
     const btn = e.target;
-    const imagen = turno % 2 ? 'url(../img/metal-lines-stripes-light-shiny-silver.jpg)' : 'url(../img/A-Abecedario-letras-grandes-imprimir-mayúsculas.jpg)'
+    const imagen = turno % 2 ? 'url(../img/dragon-ball-goku-png-photos-818491.png)' : 'url(../img/royal-blue-vegeta-446415.png)'
     btn.style.backgroundImage = imagen
     tablero[pos] = imagen;
 }
