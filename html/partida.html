@@ -17,9 +17,18 @@
         <img src="../img/tic-tac-toe-title.png" alt="">
     </div>
     <div id="main">
-        <div class="container ">
-            <div class="row ">
-                <div class="col">
+        <div class="container">
+            <div class="row">
+                <div class="col comando">
+                    <div class="alert alert-success bg-info" role="alert">
+                        <h4 class="alert-heading">Turno para el Jugador 1</h4>
+                        <p>Movimiento incorrecto</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container ">
+                <div class="row ">
+
                     <div class="col  celdas">
                         <div class="celda1"><img src="../img/kisspng-levante-ud-la-liga-spain-getafe-cf-mlaga-cf-5b0bee0bed5443.3859416915275084919721.png" alt="" class="futbol"></div>
                         <div class="celda2"></div>
@@ -32,45 +41,37 @@
                         <div class="celda9"><img src="../img/kisspng-valencia-cf-uefa-champions-league-football-logo-5bfe3eabe3ab93.5621390115433888439325.png" alt="" class="futbol"></div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col d-flex align-content-center justify-content-center comando ">
 
-
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col- d-flex align-content-center justify-content-center">
-
-                    <div class="alert alert-success bg-info" role="alert">
-                        <h4 class="alert-heading">Turno para el Jugador 1</h4>
-                        <p>Movimiento incorrecto</p>
-                        <hr>
                         <div class="boton"><button type="button" class="btn btn-warning"><a href="./seleccionjugador.html" >Empezar partida nueva</a></button></div>
                         <br>
                         <div class="boton"><button type="button" class="btn btn-warning"><a href="../index.html" >Volver menu de incio</a></button></div>
-                    </div>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">GANADOR</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    El ganador de la partida es el jugador 1
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-info" data-bs-dismiss="modal"><a href="./seleccionjugador.html" >Empezar partida nueva</a</button>
-                                    <button type="button" class="btn btn-warning"><a href="../index.html" >Volver menu de incio</a></button>
+                        <!-- Button trigger modal -->
+                        <!-- Modal -->
+                        <div class="boton"> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Ganador
+                        </button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">GANADOR</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            El ganador de la partida es el jugador 1
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-info" data-bs-dismiss="modal"><a href="./seleccionjugador.html" >Empezar partida nueva</a</button>
+                                            <button type="button" class="btn btn-warning"><a href="../index.html" >Volver menu de incio</a></button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
