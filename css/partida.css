@@ -5,8 +5,8 @@ body {
 
 .celdas {
     display: grid;
-    grid-template-rows: 8em 8em 8em;
-    grid-template-columns: 8em 8em 8em;
+    grid-template-rows: 7.5em 7.5em 7.5em;
+    grid-template-columns: 7.5em 7.5em 7.5em;
     margin-top: 3em;
     justify-content: center;
 }
@@ -44,21 +44,27 @@ body {
 .celda6 {
     border: solid 0.3em rgb(252, 75, 8);
     text-align: center;
+    border-right: none;
 }
 
 .celda7 {
     border: solid 0.3em rgb(252, 75, 8);
     text-align: center;
+    border-bottom: none;
+    border-left: none;
 }
 
 .celda8 {
     border: solid 0.3em rgb(252, 75, 8);
     text-align: center;
+    border-bottom: none;
 }
 
 .celda9 {
     border: solid 0.3em rgb(252, 75, 8);
     text-align: center;
+    border-right: none;
+    border-bottom: none;
 }
 
 #header {
