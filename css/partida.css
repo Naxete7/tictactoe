@@ -80,3 +80,12 @@ body {
     margin-top: 0.5em;
     text-align: center;
 }
+
+.boton {
+    width: 6em;
+    height: 6em;
+    color: rgba(36, 45, 53, 0);
+    background-color: rgba(250, 235, 215, 0);
+    border: none;
+    size-adjust: 5em;
+}
