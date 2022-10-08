@@ -10,10 +10,10 @@ const btnPulsado = (e, pos) => {
     const imagen = turno % 2 ? 'url(../img/dragon-ball-goku-png-photos-818491.png)' : 'url(../img/royal-blue-vegeta-446415.png)'
     btn.style.backgroundImage = imagen
     tablero[pos] = imagen;
-    if (ganador()) window.open(("./ganador.html"));
+    if (ganador()) alert("Enhorabuena!");
 };
 
-document.querySelectorAll('button').forEach(
+document.querySelectorAll('.botonp').forEach(
     (obj, i) => obj.addEventListener('click', (e) => btnPulsado(e, i)))
 
 const ganador = () => {
@@ -38,6 +38,15 @@ const ganador = () => {
     }
 
 }
+
+
+// const array = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+// array.map(ganador) => {
+
+// }
+
+
 
 // const ganador = () => {
 

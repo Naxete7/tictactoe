@@ -91,3 +91,12 @@ body {
     border: none;
     size-adjust: 5em;
 }
+
+.botonp {
+    width: 7.2em;
+    height: 7.2em;
+    color: rgba(36, 45, 53, 0);
+    background-color: rgba(250, 235, 215, 0);
+    border: none;
+    size-adjust: 5em;
+}
