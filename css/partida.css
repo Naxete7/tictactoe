@@ -1,8 +1,8 @@
 body {
     background-color: rgb(36, 233, 92);
     background-image: url(../img/metal-lines-stripes-light-shiny-silver.jpg);
-    /* background-image: url(../img/royal-blue-vegeta-446415.png);
-    background-image: url(../img/dragon-ball-goku-png-photos-818491.png) */
+    /* background-image: url(../img/dragon-ball-goku-png-photos-818491-1.png);
+    background-image: url(../img/royal-blue-vegeta-4464151.png) */
 }
 
 .celdas {
@@ -11,6 +11,8 @@ body {
     grid-template-columns: 7.5em 7.5em 7.5em;
     margin-top: 0.5em;
     justify-content: center;
+    align-content: center;
+    /* border: 0.4em solid orange; */
 }
 
 .celda1 {
@@ -99,4 +101,12 @@ body {
     background-color: rgba(250, 235, 215, 0);
     border: none;
     size-adjust: 5em;
+}
+
+#goku {
+    display: none;
+}
+
+#vegeta {
+    display: none;
 }

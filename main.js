@@ -7,7 +7,7 @@ const tablero = [];
 const btnPulsado = (e, pos) => {
     turno++;
     const btn = e.target;
-    const imagen = turno % 2 ? 'url(../img/dragon-ball-goku-png-photos-818491.png)' : 'url(../img/royal-blue-vegeta-446415.png)'
+    const imagen = turno % 2 ? 'url(../img/dragon-ball-goku-png-photos-818491-1.png)' : 'url(../img/royal-blue-vegeta-4464151.png)'
     btn.style.backgroundImage = imagen
     tablero[pos] = imagen;
     if (ganador()) alert("Enhorabuena!");
@@ -37,37 +37,73 @@ const ganador = () => {
         return false;
     }
 
-}
+};
 
 
-// const array = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+const guardarDatos = () => {
+    listaJugadores = [{
+            nombre: namePlayer1.value,
+            tipo: human1.value
+        },
+        {
+            nombre: namePlayer2.value,
+            tipo: cpu1.value
+        }
+    ]
+    tipojugador = [{
 
-// array.map(ganador) => {
+        tipo: human1.value,
+        tipo: cpu1.value,
+        tipo: human2.value,
+        tipo: cpu2.value
+    }]
 
-// }
+    sessionStorage.setItem('LISTA_JUGADORES', JSON.stringify(listaJugadores));
+};
 
 
 
-// const ganador = () => {
 
-//     switch (ganador) {
-//         case "(tablero[0] == tablero[1] && tablero[0] == tablero[2] && tablero[0])":
 
-//         case "(tablero[3] == tablero[4] && tablero[3] == tablero[5] && tablero[3])":
 
-//         case "(tablero[6] == tablero[7] && tablero[6] == tablero[8] && tablero[6])":
 
-//         case "(tablero[30] == tablero[3] && tablero[0] == tablero[6] && tablero[0])":
 
-//         case "(tablero[1] == tablero[4] && tablero[1] == tablero[7] && tablero[1])":
+// {
+//     $("#btnganador").click(); {
 
-//         case "(tablero[2] == tablero[5] && tablero[2] == tablero[8] && tablero[2])":
+//         window.location.href = "./html/ganador.html";
 
-//         case "(tablero[0] == tablero[4] && tablero[0] == tablero[8] && tablero[0])":
+//     };
 
-//         case "(tablero[2] == tablero[4] && tablero[2] == tablero[6] && tablero[2])":
 
-//             return alert("enhorabuena");
 
-//     }
-// }
+
+
+
+// let casillas = Array.from(document.getElementsByClassName("rectangulo"));
+
+
+// let interruptor = true;
+
+// casillas.map((casilla, /*index*/ ) => {
+//             casilla.addEventListener("click", () => {
+//                         let img = document.getElementById('goku');
+//                         img.style.display = 'block'
+//                         if (img == img.style.display('block')) {
+//                             img.display = 'block';
+
+//                         };
+
+
+
+// casillas.map((casilla, /*index*/ ) => {
+//     casilla.addEventListener("click", () => {
+//         if (casilla.innerHTML == "") {
+//             casilla.innerHTML = (interruptor) ? 'url(../img/dragon-ball-goku-png-photos-818491-1.png)' : 'O';
+//             interruptor = !interruptor;
+
+//             if (ganador()) alert("Enhorabuena!");
+
+//         };
+//     });
+// });

@@ -15,65 +15,65 @@
 
 <body>
     <div id="header">
-        <img src="../img/tic-tac-toe-title.png" alt="">
+        <img class="img-fluid" src="../img/tic-tac-toe-title.png" alt="">
     </div>
     <div id="main">
-        <div class="container text-center">
-            <div class="row d-flex justify-content-center align-content-center">
-                <div class="col-7 nombres">
-                    <div class="botones">
-                        <h3>Jugador 1</h3>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Introduzca su nombre</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Introduzca su nombre...">
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                          Persona
-                        </label>
-                        </div>
-                        <br>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                          CPU
-                        </label>
-                        </div>
-                    </div>
-                    <div class="botones">
-                        <h3>Jugador 2</h3>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Introduzca su nombre</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Introduzca su nombre...">
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1">Persona</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">CPU</label>
-                        </div>
+        <div class="container text-center text-break">
+            <div class="row">
+                <form class="row-6 d-flex align-content-center justify-content-center g-3">
+                    <div class="col-auto nombres">
+                        <h3>JUGADOR 1</h3>
+
+                        <input type="text" class="form-control" id="namePlayer1" placeholder="Escriba aqui su nombre">
                     </div>
 
-                    <div><button type="button" class="btn btn-info btn-lg"><a href="./partida.html">Partida nueva</a></button></div>
+                </form>
+            </div>
+            <div class="row d-flex align-content-center justify-content-center">
+                <div class="col d-flex align-content-center justify-content-center nombres">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="human1" value="option1">
+                        <label class="form-check-label" for="human1">Persona</label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="cpu1" checked>
+                        <label class="form-check-label" for="cpu1">
+                  CPU
+                </label>
+                    </div>
                 </div>
-                <div class="col celdas">
-                    <div class="celda1">1</div>
-                    <div class="celda2">2</div>
-                    <div class="celda3">3</div>
-                    <div class="celda4">4</div>
-                    <div class="celda5">5</div>
-                    <div class="celda6">6</div>
-                    <div class="celda7">7</div>
-                    <div class="celda8">8</div>
-                    <div class="celda9">9</div>
+            </div>
+
+        </div>
+        <div class="row-flluid">
+            <form class="row-6 d-flex align-content-center justify-content-center g-3">
+                <div class="col-fluid nombres">
+                    <h3>JUGADOR 2</h3>
+
+                    <input type="text" class="form-control" id="namePlayer2" placeholder="Escriba aqui su nombre">
                 </div>
+            </form>
+        </div>
+        <div class="row-fluid d-flex align-content-center justify-content-center">
+            <div class="col-fluid d-flex align-content-center justify-content-center nombres">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="human2" value="option1">
+                    <label class="form-check-label" for="human2">Persona</label>
+                </div>
+                <br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="cpu2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+              CPU
+            </label>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid d-flex align-content-center justify-content-center">
+            <div class="col-fluid d-flex align-content-center justify-content-center">
+
+                <div class="boton"><button type="button" class="btn btn-warning " onclick="guardarDatos()"><a href="./partida.html" >Empezar partida nueva</a></button></div>
             </div>
         </div>
     </div>
