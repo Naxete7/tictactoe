@@ -1,16 +1,16 @@
 document.querySelectorAll('.botonp').forEach(
-    (obj, i) => obj.addEventListener('click', (e) => btnPulsado(e, i)))
+    (btnp, i) => btnp.addEventListener('click', (e) => btnPulsado(e, i)))
 
-let turno = 0
-let tablero = ["", "", "", "", "", "", "", "", ""];
-
-
+let tirada = 0
+let tablero = [];
+// let player1 = 0;
+// let player2 = 0;
 
 
 const btnPulsado = (e, pos) => {
-    turno++;
+    tirada++;
     const btn = e.target;
-    const imagen = turno % 2 ? 'url(../img/dragon-ball-goku-png-photos-818491-1.png)' : 'url(../img/royal-blue-vegeta-4464151.png)'
+    const imagen = tirada % 2 ? 'url(../img/dragon-ball-goku-png-photos-818491-1.png)' : 'url(../img/royal-blue-vegeta-4464151.png)'
     btn.style.backgroundImage = imagen;
     tablero[pos] = imagen;
 
@@ -20,6 +20,7 @@ const btnPulsado = (e, pos) => {
 
 
 
+//Comprobamos si hay ganador
 const ganador = () => {
     if (tablero[0] == tablero[1] && tablero[0] == tablero[2] && tablero[0]) {
         return true;
@@ -44,6 +45,7 @@ const ganador = () => {
 };
 
 
+//Guardamos datos de los jugadores en la sessionStorage
 const guardarDatos = () => {
     listaJugadores = [{
                 nombre: namePlayer1.value,
@@ -63,34 +65,16 @@ const guardarDatos = () => {
     //     tipo: cpu2.value
     // }]
     //guardamos datos en sessionStorage
-    sessionStorage.setItem('LISTA_JUGADORES', JSON.stringify(listaJugadores));
+    // sessionStorage.setItem('LISTA_JUGADORES', JSON.stringify(listaJugadores));
 };
 //recuperamos datos del sessionStorage
-let jug1Data = JSON.parse(sessionStorage.getItem('playerX'))
-let jug2Data = JSON.parse(sessionStorage.getItem('playerO'))
-
-
-
-
-
-
-
-
-
-// {
-//     $("#btnganador").click(); {
-
-//         window.location.href = "./html/ganador.html";
-
-//     };
-
-
+// let jug1Data = JSON.parse(sessionStorage.getItem('playerX'))
+// let jug2Data = JSON.parse(sessionStorage.getItem('playerO'))
 
 
 
 
 // let casillas = Array.from(document.getElementsByClassName("rectangulo"));
-
 
 // let interruptor = true;
 
@@ -102,7 +86,6 @@ let jug2Data = JSON.parse(sessionStorage.getItem('playerO'))
 //                             img.display = 'block';
 
 //                         };
-
 
 
 // casillas.map((casilla, /*index*/ ) => {
