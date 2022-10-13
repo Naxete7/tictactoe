@@ -2,7 +2,9 @@ document.querySelectorAll('.botonp').forEach(
     (obj, i) => obj.addEventListener('click', (e) => btnPulsado(e, i)))
 
 let turno = 0
-const tablero = [];
+let tablero = ["", "", "", "", "", "", "", "", ""];
+
+
 
 
 const btnPulsado = (e, pos) => {
@@ -11,8 +13,11 @@ const btnPulsado = (e, pos) => {
     const imagen = turno % 2 ? 'url(../img/dragon-ball-goku-png-photos-818491-1.png)' : 'url(../img/royal-blue-vegeta-4464151.png)'
     btn.style.backgroundImage = imagen;
     tablero[pos] = imagen;
+
     if (ganador()) window.location.href = "ganador.html";
 };
+
+
 
 
 const ganador = () => {
@@ -39,7 +44,6 @@ const ganador = () => {
 };
 
 
-
 const guardarDatos = () => {
     listaJugadores = [{
                 nombre: namePlayer1.value,
@@ -64,8 +68,17 @@ const guardarDatos = () => {
 //recuperamos datos del sessionStorage
 let jug1Data = JSON.parse(sessionStorage.getItem('playerX'))
 let jug2Data = JSON.parse(sessionStorage.getItem('playerO'))
-    // {
-    //     $("#btnganador").click(); {
+
+
+
+
+
+
+
+
+
+// {
+//     $("#btnganador").click(); {
 
 //         window.location.href = "./html/ganador.html";
 
