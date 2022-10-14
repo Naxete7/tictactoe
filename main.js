@@ -1,21 +1,33 @@
+//Preparamos el juego para que al pulsar el boton salgan las fichas
 document.querySelectorAll('.botonp').forEach(
     (btnp, i) => btnp.addEventListener('click', (e) => btnPulsado(e, i)))
 
 let tirada = 0
 let tablero = [];
-// let player1 = 0;
-// let player2 = 0;
+let X = 'url(../img/dragon-ball-goku-png-photos-818491-1.png)'
+let O = 'url(../img/royal-blue-vegeta-4464151.png)'
 
 
 const btnPulsado = (e, pos) => {
     tirada++;
     const btn = e.target;
-    const imagen = tirada % 2 ? 'url(../img/dragon-ball-goku-png-photos-818491-1.png)' : 'url(../img/royal-blue-vegeta-4464151.png)'
-    btn.style.backgroundImage = imagen;
-    tablero[pos] = imagen;
+    //if la posicion esta vacia me deja, sino no hace nada
+    if (pos == []) {
+        const imagen = tirada % 2 ? X : O
+        btn.style.backgroundImage = imagen;
+        tablero[pos] = imagen;
 
-    if (ganador()) window.location.href = "ganador.html";
+
+        //si hay 3 fichas de cada jugador, ya puedes hacer click
+        //si es diferente de null, y diferente del otro jugador, si puedes pulsar      
+        if (ganador()) window.location.href = "ganador.html";
+
+    } else {}
 };
+
+// }
+
+
 
 
 
@@ -46,26 +58,23 @@ const ganador = () => {
 
 
 //Guardamos datos de los jugadores en la sessionStorage
+const optionHumanJ1 = document.getElementById('human1-option1');
+const optionHumanJ2 = document.getElementById('human2-option1');
+
+
 const guardarDatos = () => {
     listaJugadores = [{
-                nombre: namePlayer1.value,
-                tipo: jugador1.value
-            },
-            {
-                nombre: namePlayer2.value,
-                tipo: human2.value
+            nombre: namePlayer1.value,
+            human: optionHumanJ1.checked
+        },
+        {
+            nombre: namePlayer2.value,
+            human: optionHumanJ2.checked
 
-            }
-        ]
-        // tipojugador = [{
+        }
+    ]
 
-    //     tipo: human1.value,
-    //     tipo: cpu1.value,
-    //     tipo: human2.value,
-    //     tipo: cpu2.value
-    // }]
-    //guardamos datos en sessionStorage
-    // sessionStorage.setItem('LISTA_JUGADORES', JSON.stringify(listaJugadores));
+    sessionStorage.setItem('LISTA_JUGADORES', JSON.stringify(listaJugadores));
 };
 //recuperamos datos del sessionStorage
 // let jug1Data = JSON.parse(sessionStorage.getItem('playerX'))
