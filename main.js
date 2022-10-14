@@ -12,7 +12,7 @@ const btnPulsado = (e, pos) => {
     tirada++;
     const btn = e.target;
     //if la posicion esta vacia me deja, sino no hace nada
-    if (pos == []) {
+    if (pos = ["", "", "", "", "", "", "", "", ""]) {
         const imagen = tirada % 2 ? X : O
         btn.style.backgroundImage = imagen;
         tablero[pos] = imagen;
@@ -58,23 +58,21 @@ const ganador = () => {
 
 
 //Guardamos datos de los jugadores en la sessionStorage
-const optionHumanJ1 = document.getElementById('human1-option1');
-const optionHumanJ2 = document.getElementById('human2-option1');
+const optionHumanJ1 = document.getElementById('human1');
+const optionHumanJ2 = document.getElementById('human2');
 
 
 const guardarDatos = () => {
-    listaJugadores = [{
-            nombre: namePlayer1.value,
+    playersList = [{
+            name: namePlayer1.value,
             human: optionHumanJ1.checked
         },
         {
-            nombre: namePlayer2.value,
+            name: namePlayer2.value,
             human: optionHumanJ2.checked
-
         }
     ]
-
-    sessionStorage.setItem('LISTA_JUGADORES', JSON.stringify(listaJugadores));
+    sessionStorage.setItem('LISTA_JUGADORES', JSON.stringify(playersList));
 };
 //recuperamos datos del sessionStorage
 // let jug1Data = JSON.parse(sessionStorage.getItem('playerX'))
