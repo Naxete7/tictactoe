@@ -18,7 +18,8 @@ PANTALLA SELECCION DE JUGADORES
 ![Seleccion de jugador](https://user-images.githubusercontent.com/109297564/195950611-cf2dbd1b-795d-455d-add9-f428d6781276.jpg)
 
 
-![Pantalla de inicio responsive](https://user-images.githubusercontent.com/109297564/195950621-31102d50-8ccb-4f38-9c60-7983f030004a.jpg)
+![seleccion de jugador responsive](https://user-images.githubusercontent.com/109297564/195952478-da0c023a-aea9-4945-9cfd-2c0be2f7df0e.jpg)
+
 
 
 En esta pantalla podremos poner nuestro nombre, y elegir si queremos jugar contra otra persona o contra la cpu, la cual actuará de forma aleatoria.
