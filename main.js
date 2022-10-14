@@ -9,23 +9,27 @@ let O = 'url(../img/royal-blue-vegeta-4464151.png)'
 
 
 const btnPulsado = (e, pos) => {
-    tirada++;
-    const btn = e.target;
-    //if la posicion esta vacia me deja, sino no hace nada
-    if (pos = ["", "", "", "", "", "", "", "", ""]) {
-        const imagen = tirada % 2 ? X : O
-        btn.style.backgroundImage = imagen;
-        tablero[pos] = imagen;
+        tirada++;
+        const btn = e.target;
+        //if la posicion esta vacia me deja, sino no hace nada
+        if (boton = [""]) {
+            const imagen = tirada % 2 ? X : O
+            btn.style.backgroundImage = imagen;
+            tablero[pos] = imagen;
 
 
-        //si hay 3 fichas de cada jugador, ya puedes hacer click
-        //si es diferente de null, y diferente del otro jugador, si puedes pulsar      
+            //si hay 3 fichas de cada jugador, ya puedes hacer click
+            // if (X = < 3)
+            // if (O = < 3)
+            //si es diferente de null, y diferente del otro jugador, si puedes pulsar 
+            // if (X = !null && = !O)) {
+
+        };
         if (ganador()) window.location.href = "ganador.html";
 
-    } else {}
-};
+    }
+    // else {}
 
-// }
 
 
 
@@ -75,47 +79,12 @@ const guardarDatos = () => {
     sessionStorage.setItem('LISTA_JUGADORES', JSON.stringify(playersList));
 };
 //recuperamos datos del sessionStorage
-// let jug1Data = JSON.parse(sessionStorage.getItem('playerX'))
-// let jug2Data = JSON.parse(sessionStorage.getItem('playerO'))
+const humanJ1 = JSON.parse(sessionStorage.getItem("LISTA_JUGADORES"))[0].human;
+const humanJ2 = JSON.parse(sessionStorage.getItem("LISTA_JUGADORES"))[0].human2;
 
 
+function verhumanJ1() {
+    document.write(humanJ1);
+}
 
-
-// let casillas = Array.from(document.getElementsByClassName("rectangulo"));
-
-// let interruptor = true;
-
-// casillas.map((casilla, /*index*/ ) => {
-//             casilla.addEventListener("click", () => {
-//                         let img = document.getElementById('goku');
-//                         img.style.display = 'block'
-//                         if (img == img.style.display('block')) {
-//                             img.display = 'block';
-
-//                         };
-
-
-// casillas.map((casilla, /*index*/ ) => {
-//     casilla.addEventListener("click", () => {
-//         if (casilla.innerHTML == "") {
-//             casilla.innerHTML = (interruptor) ? 'x' : 'O';
-//             interruptor = !interruptor;
-
-//             if (ganador()) alert("Enhorabuena!");
-
-//         };
-//     });
-// });
-
-// let jugador1 = document.getElementById(namePlayer1)
-// let jugador2 = document.getElementById(namePLayer2)
-
-
-
-// let player1 = { nombre: jugador1.value } //tipo: jugador1.value}
-// let player2 = { nombre: jugador2.value } //tipo: jugadpr2.value }
-// let player = {}
-
-
-// sessionStorage.setItem('playerX', JSON.stringify(player1))
-// sessionStorage.setItem('playerO', JSON.stringify(player2))
+let mensaje = tirada % 2 ? humanJ1 : humanJ2
