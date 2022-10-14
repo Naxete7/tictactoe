@@ -11,7 +11,7 @@ body {
     display: grid;
     grid-template-rows: 7.4em 7.4em 7.4em;
     grid-template-columns: 7.4em 7.4em 7.4em;
-    margin-top: 0.2em;
+    /* margin-top: 0.1em; */
     justify-content: center;
     align-content: center;
     /* border: 0.4em solid orange; */
