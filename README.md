@@ -26,11 +26,10 @@ En esta pantalla podremos poner nuestro nombre, y elegir si queremos jugar contr
 
 PANTALLA DE JUEGO
 
+![pantalla Juego](https://user-images.githubusercontent.com/109297564/196059835-a47fd08e-bb4a-46d5-8a76-ce30a0a5be77.jpg)
 
-![pantalla Juego](https://user-images.githubusercontent.com/109297564/195950720-0a14b270-1004-463b-a24a-ff81988e7954.jpg)
 
-
-![Pantalla de juego responsive](https://user-images.githubusercontent.com/109297564/195950733-9c8dbac9-51a6-42de-a2f5-a7a893e74d8e.jpg)
+![Pantalla de juego responsive](https://user-images.githubusercontent.com/109297564/196059837-4b571a94-2f17-442e-ab9e-19b9a0b66fd5.jpg)
 
 
 Y por fin llegamos a la pantalla donde se desarrollará la partida de nuestro juego. 
@@ -43,9 +42,10 @@ Y solo cuando uno de los jugadores consiga colocar sus tres fichas en raya, pasa
 
 PANTALLA DE GANADOR
 
-![pantalla ganador](https://user-images.githubusercontent.com/109297564/195952019-16e22113-8805-44b1-a816-698688dd11ca.jpg)
+![pantalla ganador](https://user-images.githubusercontent.com/109297564/196059822-b11b0730-81c5-4d75-87de-302085608447.jpg)
 
-![ganador responsive](https://user-images.githubusercontent.com/109297564/195952039-97dae3e4-3884-4f2a-8d67-dd0003145125.jpg)
+![ganador responsive](https://user-images.githubusercontent.com/109297564/196059824-2b504a3e-b654-45cd-b30d-a07fd4b0a418.jpg)
+
 
 Como hemos dicho antes, a esta pantalla se accedera de forma automática cuando uno de los dos jugadores consiga el objetivo del juego, colocar las tres fichas en raya.
 Como observamos en las dos imagenes de arriba, la vista normal y la responsive, tendremos un recuadro donde nos indica el ganador del juego, y un botón que nos dirigirá a la pantalla de inicio.
