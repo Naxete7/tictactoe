@@ -38,7 +38,7 @@ let cuadro = document.getElementById("dialogo")
 
 function turno() {
 
-    if (tirada) {
+    if (tirada % 2) {
         cuadro.innerHTML = "Turno para " + name1
     } else {
         cuadro.innerHTML = "Turno para " + name2
@@ -77,7 +77,7 @@ const btnPulsado = (e, pos) => {
         btn.style.backgroundImage = imagen;
         tablero[pos] = imagen;
         //Cada jugador puede tener como maximo 3 fichas en el tablero
-
+        turno()
 
         // if (X = < 3)
         playerX <= 3
@@ -89,7 +89,7 @@ const btnPulsado = (e, pos) => {
         // if (X = !null && = !O)) {
     };
     if (ganador()) window.location.href = "ganador.html";
-    turno()
+
 }
 
 //Comprobamos si hay ganador
