@@ -5,9 +5,10 @@ let tirada = 0
 let tablero = [];
 let playerX = 'url(../img/dragon-ball-goku-png-photos-818491-1.png)'
 let playerO = 'url(../img/royal-blue-vegeta-4464151.png)'
-    // let contPlayerX = 0
-    // let contPlayerO = 0
-    //Guardamos datos de los jugadores en la sessionStorage
+    // let contPlayerX = < 3;
+    // let contPlayerO = < 3;
+
+//Guardamos datos de los jugadores en la sessionStorage
 const optionHumanJ1 = document.getElementById('human1');
 const optionHumanJ2 = document.getElementById('human2');
 
@@ -47,28 +48,28 @@ function turno() {
 
 
 
+//programamos la cpu modo random
+
 function cpu() {
     If(humanJ1 = false); {
 
-        cpuRandom
+        humanJ2 == true
 
     };
 }
 
 
-
-// If(humanJ1 = false); {
-//     humanJ2 = true
-
-// };
-
 const cpuRandom = () => {
-        const random = Math.round(Math.random() * 8)
-        return casillas[random]
-    }
-    //Preparamos el juego para que al pulsar el boton salgan las fichas
+    const random = Math.round(Math.random() * 8)
+    return casillas[random]
+}
+
+
+
+//Preparamos el juego para que al pulsar el boton salgan las fichas
 
 const btnPulsado = (e, pos) => {
+    turno()
     tirada++;
     const btn = e.target;
     //if la posicion esta vacia me deja, sino no hace nada
@@ -76,12 +77,13 @@ const btnPulsado = (e, pos) => {
         const imagen = tirada % 2 ? playerX : playerO
         btn.style.backgroundImage = imagen;
         tablero[pos] = imagen;
+
+
         //Cada jugador puede tener como maximo 3 fichas en el tablero
-        turno()
 
         // if (X = < 3)
-        playerX <= 3
-        playerO <= 3
+        playerX.tirada <= 3
+        playerO.tirada <= 3
             // if (O = < 3)
 
 
@@ -89,7 +91,7 @@ const btnPulsado = (e, pos) => {
         // if (X = !null && = !O)) {
     };
     if (ganador()) window.location.href = "ganador.html";
-
+    // winner()
 }
 
 //Comprobamos si hay ganador
@@ -116,31 +118,13 @@ const ganador = () => {
 
 };
 
+//Funcion de ganador para que aparezca el nombre del ganador en el cuadro
+// let cuadroGanador = document.getElementById("cuadroganador")
 
-
-//Volvemos a guardar los datos en el sessionStorage, para que salgan en el cuadro del ganador
-
-const ganadorHumanJ1 = document.getElementById('human1');
-const ganadorHumanJ2 = document.getElementById('human2');
-
-const datosganador = () => {
-    playersList = [{
-            name: namePlayer1.value,
-            human: optionHumanJ1.checked
-        },
-        {
-            name: namePlayer2.value,
-            human: optionHumanJ2.checked
-        }
-    ]
-    sessionStorage.setItem('LISTA_GANADORES', JSON.stringify(playersList));
-};
-
-
-let nameganador1 = JSON.parse(sessionStorage.getItem("LISTA_GANADORES"))[0].name
-let nameganador2 = JSON.parse(sessionStorage.getItem("LISTA_GANADORES"))[1].name
-
-let cuadroganador = document.getElementById("cuadroganador")
-    // if (ganador = playerX) {
-cuadroganador.innerHTML = ("El ganador es " + nameganador1)
-    // } else(winner.innerHTML = "El ganador es: " + nameganador2);
+// function winner() {
+//     if (ganador = playerX) {
+//         cuadroGanador.innerHTML = "Ha ganado la partida " + name1
+//     } else {
+//         cuadroGanador.innerHTML = "Ha ganado la partida" + name2
+//     }
+// };
