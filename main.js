@@ -4,16 +4,16 @@ document.querySelectorAll('.botonp').forEach(
 
 let tirada = 0
 let tablero = [];
-let X = 'url(../img/dragon-ball-goku-png-photos-818491-1.png)'
-let O = 'url(../img/royal-blue-vegeta-4464151.png)'
+let playerX = 'url(../img/dragon-ball-goku-png-photos-818491-1.png)'
+let playerO = 'url(../img/royal-blue-vegeta-4464151.png)'
 
 
 const btnPulsado = (e, pos) => {
         tirada++;
         const btn = e.target;
         //if la posicion esta vacia me deja, sino no hace nada
-        if (boton = [""]) {
-            const imagen = tirada % 2 ? X : O
+        if (tablero.pos = [""]) {
+            const imagen = tirada % 2 ? playerX : playerO
             btn.style.backgroundImage = imagen;
             tablero[pos] = imagen;
 
@@ -79,12 +79,28 @@ const guardarDatos = () => {
     sessionStorage.setItem('LISTA_JUGADORES', JSON.stringify(playersList));
 };
 //recuperamos datos del sessionStorage
-const humanJ1 = JSON.parse(sessionStorage.getItem("LISTA_JUGADORES"))[0].human;
-const humanJ2 = JSON.parse(sessionStorage.getItem("LISTA_JUGADORES"))[0].human2;
+let humanJ1 = JSON.parse(sessionStorage.getItem("LISTA_JUGADORES"))[0].human1;
+let humanJ2 = JSON.parse(sessionStorage.getItem("LISTA_JUGADORES"))[1].human2;
 
 
-function verhumanJ1() {
-    document.write(humanJ1);
+let name1 = JSON.parse(sessionStorage.getItem("LISTA_JUGADORES"))[0].name
+let name2 = JSON.parse(sessionStorage.getItem("LISTA_JUGADORES"))[1].name
+
+
+let cuadro = document.getElementById("dialogo")
+
+if (playerX) {
+    cuadro.innerHTML = ("Turno para " + name1)
+} else {
+    cuadro.innerHTML = "Turno para " + name2
+
 }
 
-let mensaje = tirada % 2 ? humanJ1 : humanJ2
+let nameganador1 = JSON.parse(sessionStorage.getItem("LISTA_JUGADORES"))[0].name
+let nameganador2 = JSON.parse(sessionStorage.getItem("LISTA_JUGADORES"))[1].name
+
+
+let cuadroganador = document.getElementById("cuadroganador")
+    // if (ganador = playerX) {
+cuadroganador.innerHTML = ("El ganador es " + nameganador1)
+    // } else(winner.innerHTML = "El ganador es: " + name1);
