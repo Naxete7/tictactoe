@@ -1,14 +1,9 @@
-//falta limitar a 3 fichas por jugador. Poner nombre de ganador. CPU
-// validar si playerX tiene 3 fichas, no dejar poner mas
-
-
-
-
+//Evento pulsar
 document.querySelectorAll('.botonp').forEach(
     (btnp, i) => btnp.addEventListener('click', (e) => btnPulsado(e, i)))
 
 
-
+//Variables
 let tirada = 0
 let tablero = [];
 let playerX = 'url(../img/dragon-ball-goku-png-photos-818491-1.png)'
@@ -20,14 +15,6 @@ let contPlayerO = 3
 //Guardamos datos de los jugadores en la sessionStorage
 const optionHumanJ1 = document.getElementById('human1');
 const optionHumanJ2 = document.getElementById('human2');
-// class Player {
-//     constructor(nombre, tipo, mark) {
-//         this.nombre = nombre;
-//         this.tipo = tipo;
-//         this.turnos = 3;
-//         this.mark = mark
-//     }
-// };
 
 
 const guardarDatos = () => {
@@ -63,35 +50,30 @@ function turno() {
     }
 };
 
-// const fichasX = () => {
+//Limitamos fichas a 3 por jugador
+const fichasX = () => {
 
-//     if (contPlayerX < 3) { return true } else { return false }
-// };
+    if (contPlayerX < 4) { return true } else { return false }
+};
 
-// const fichasO = () => {
+const fichasO = () => {
 
-//     if (contPlayerO < 3) { return true } else { return false }
+    if (contPlayerO < 4) { return true } else { return false }
 
-// };
-
-
-
+};
 
 
 //Preparamos el juego para que al pulsar el boton salgan las fichas
 
-
-
 const btnPulsado = (e, pos) => {
     if (playerX) { contPlayerX--; };
     contPlayerO--;
-    // if (tablero[pos] == `div.rectangulo.celda${pos}`) {
-    if (tablero[pos] == undefined) {
+
+    if (tablero[pos] == undefined && fichasX) {
         turno()
         tirada++;
         const btn = e.target;
-        //if la posicion esta vacia me deja, sino no hace nada
-        // console.log(tablero[pos] == undefined);
+
         const imagen = tirada % 2 ? playerX : playerO
         btn.style.backgroundImage = imagen;
         tablero[pos] = imagen;
